@@ -31,7 +31,7 @@ void setup() {
 
 void loop() {
 
-  
+
 }
 
 
@@ -56,7 +56,7 @@ void drawChart() {
   display.fillScreen(GxEPD_WHITE);  // 清空屏幕
   display.setTextColor(GxEPD_BLACK);
   display.setFont(&FreeMonoBold9pt7b);
-  int temperatures[] = { 5, 15, 20, 35, 10, 35 };
+  int temperatures[] = { 5, 15, 20, 25, 10, 35 };
   int numDays = sizeof(temperatures) / sizeof(temperatures[0]);
 
   // 确定坐标轴范围
@@ -96,6 +96,8 @@ void drawChart() {
     int cx2 = x1 + 2 * (x2 - x1) / 3;
     int cy2 = y2 + 5;
 
+
+
     // 绘制模拟贝塞尔曲线的过渡段
     int prevX, prevY;
     for (int j = 0; j <= 10; j++) {
@@ -106,6 +108,14 @@ void drawChart() {
       if (j > 0) {
         display.drawLine(prevX, prevY, bx, by, GxEPD_BLACK);
       }
+      //display.drawFastVLine(bx, by, 128 - by, GxEPD_BLACK);//填充竖线
+
+      //display.fillCircle(x1, y1, 3, GxEPD_BLACK);//转折点画圆
+      //display.fillCircle(x1, y1, 3, GxEPD_WHITE);//转折点白色圆模拟虚线
+
+      //display.setCursor(x1 - 12, y1 -7);//绘制温度数值
+      //display.print(temperatures[i]);
+
       prevX = bx;
       prevY = by;
     }
