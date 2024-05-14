@@ -7,8 +7,8 @@
 #include <HTTPClient.h>
 #include <ArduinoJson.h>
 
-const char* ssid = "sinabook_dd";
-const char* password = "jsxayjhd";
+const char* ssid = "";
+const char* password = "";
 const char* url = "http://10.205.12.34";
 
 U8G2_FOR_ADAFRUIT_GFX u8g2Fonts;
