@@ -2,6 +2,8 @@
 ![image](jpg/1.jpg)
 ![image](jpg/2.jpg)
 ![image](jpg/3.jpg)
+联网实时显示温度
+![image](jpg/4.jpg)
 
 ### 项目简介
 此项目是一个简单的绘制贝塞尔折线图的方式，代码仅供参考
